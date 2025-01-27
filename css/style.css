@@ -1809,3 +1809,11 @@ img, iframe {
   max-width: 100%;
   height: auto;
 }
+
+@supports (-webkit-touch-callout: none) {
+  /* CSS spécifique à Safari */
+  .container {
+      display: flex;
+      flex-wrap: wrap;
+  }
+}
