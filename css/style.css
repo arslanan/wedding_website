@@ -1030,7 +1030,8 @@ form label {
   }
 }
 .fh5co-heading p {
-  font-size: 20;
+  font-family:  'icomoon';
+  font-size: 20px;
   line-height: 1.5;
   color: #021f10;
 }
