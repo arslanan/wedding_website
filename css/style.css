@@ -49,13 +49,13 @@ body {
 }
 
 a {
-  color: #646464;
+  color: rgba(0, 0, 0, 0.8);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #646464;
+  color: #077d07;
   outline: none;
   text-decoration: none;
 }
@@ -196,21 +196,6 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-nav ul li.btn-cta a {
   color: #646464;
 }
-.fh5co-nav ul li.btn-cta a span {
-  background: #fff;
-  padding: 4px 20px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  -ms-border-radius: 100px;
-  border-radius: 100px;
-}
 .fh5co-nav ul li.btn-cta a:hover span {
   -webkit-box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
@@ -308,7 +293,8 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #fh5co-counter .fh5co-heading h2,
 #fh5co-event .fh5co-heading h2 {
-  color: #646464;
+  color: #042301;
+  text-align: center;
 }
 #fh5co-counter .fh5co-heading span,
 #fh5co-event .fh5co-heading span {
@@ -320,7 +306,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #fh5co-counter .overlay,
 #fh5co-event .overlay {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -697,24 +683,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 0;
   padding: 0;
 }
-.fh5co-social-icons li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: -moz-inline-stack;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-}
-.fh5co-social-icons li a {
-  display: -moz-inline-stack;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-  color: #646464;
-  padding-left: 10px;
-  padding-right: 10px;
-}
+
 .fh5co-social-icons li a i {
   font-size: 20px;
 }
@@ -1059,9 +1028,9 @@ form label {
   }
 }
 .fh5co-heading p {
-  font-size: 18px;
+  font-size: 20;
   line-height: 1.5;
-  color: #828282;
+  color: #021f10;
 }
 .fh5co-heading span {
   text-transform: uppercase;
@@ -1087,15 +1056,6 @@ form label {
 #fh5co-testimonial .wrap-testimony .testimony-slide span a.twitter {
   color: #646464;
   font-weight: 300;
-}
-#fh5co-testimonial .wrap-testimony .testimony-slide figure {
-  margin-bottom: 10px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-  width: 100px;
-  height: 100px;
 }
 #fh5co-testimonial .wrap-testimony .testimony-slide figure img {
   width: 100px;
@@ -1342,26 +1302,6 @@ form label {
 #fh5co-offcanvas ul li.offcanvas-has-dropdown > a {
   display: block;
   position: relative;
-}
-#fh5co-offcanvas ul li.offcanvas-has-dropdown > a:after {
-  position: absolute;
-  right: 0px;
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\e921";
-  font-size: 20px;
-  color: rgba(255, 255, 255, 0.2);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
 }
 #fh5co-offcanvas ul li.offcanvas-has-dropdown.active a:after {
   -webkit-transform: rotate(-180deg);
