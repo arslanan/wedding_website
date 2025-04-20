@@ -1021,10 +1021,12 @@ form label {
   font-weight: bold;
   color: #646464;
   font-family: "Amsterdam", Arial, serif;
+  text-align: center;
 }
 @media screen and (max-width: 768px) {
   .fh5co-heading h2 {
     font-size: 40px;
+    text-align: center;
   }
 }
 .fh5co-heading p {
