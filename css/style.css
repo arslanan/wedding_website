@@ -1010,14 +1010,8 @@ form label {
 
 .fh5co-heading {
   margin-bottom: 5em;
-}
+  text-align: center;
 
-@media screen and (max-width: 768px) {
-  .fh5co-heading {
-    margin: 0 auto;
-    text-align: center;
-    float: none;
-  }
 }
 
 .fh5co-heading.fh5co-heading-sm {
