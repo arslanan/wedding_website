@@ -293,7 +293,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #fh5co-counter .fh5co-heading h2,
 #fh5co-event .fh5co-heading h2 {
-  color: #042301;
+  color: #011d0c;
   text-align: center;
 }
 #fh5co-counter .fh5co-heading span,
@@ -1022,7 +1022,7 @@ form label {
   margin-bottom: 10px;
   line-height: 1.5;
   font-weight: bold;
-  color: #646464;
+  color: #011d0c;
   font-family: "Amsterdam", Arial, serif;
   text-align: center;
 }
@@ -1036,7 +1036,7 @@ form label {
   font-family:  'icomoon';
   font-size: 20px;
   line-height: 1.5;
-  color: #021f10;
+  color: #011d0c;
 }
 .fh5co-heading span {
   text-transform: uppercase;
