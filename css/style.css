@@ -21,6 +21,13 @@ body {
   overflow-x: hidden;
 }
 
+.full-width-center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
 #page {
   position: relative;
   overflow-x: hidden;
