@@ -70,7 +70,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: #077d07;
+  color: #fc8ff6;
   outline: none;
   text-decoration: none;
 }
@@ -1296,7 +1296,7 @@ form label {
   position: absolute;
   z-index: 998;
   width: 270px;
-  background: black;
+  background: rgb(244, 227, 212);
   font-size: 14px;
   font-weight: bold;
   font-family: Sofia Sans Condensed;
@@ -1323,7 +1323,7 @@ form label {
   transform: translateX(0px);
 }
 #fh5co-offcanvas a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(16, 1, 1, 0.5);
 }
 #fh5co-offcanvas a:hover {
   color: rgba(255, 255, 255, 0.8);
@@ -1443,12 +1443,12 @@ form label {
   transition: all 0.2s ease-out;
 }
 .fh5co-nav-toggle.fh5co-nav-white > i {
-  color: #175918;
-  background: #175918;
+  color: #0e024ad9;
+  background: #0e024ad9;
 }
 .fh5co-nav-toggle.fh5co-nav-white > i::before,
 .fh5co-nav-toggle.fh5co-nav-white > i::after {
-  background: #175918;
+  background: #0e024ad9;
 }
 
 .fh5co-nav-toggle i::before {
