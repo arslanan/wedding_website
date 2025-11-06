@@ -62,7 +62,7 @@ body {
 }
 
 a {
-  color: rgba(0, 0, 0, 0.8);
+  color: #3a40ec;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
