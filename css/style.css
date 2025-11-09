@@ -233,8 +233,8 @@ figure {
 #fh5co-counter,
 #fh5co-event,
 .fh5co-bg {
-  background-size: contain;
-  background-position: center center;
+  background-size: cover;
+  background-position: top center;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -242,13 +242,12 @@ figure {
 .fh5co-bg {
   background-position: center center;
   width: 100%;
-  float: none;
+  float: center;
   position: relative;
 }
 .fh5co-cover {
   height: 1000px;
-  background-size: contain;
-  background-position: center center;
+  background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
