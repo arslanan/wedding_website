@@ -126,9 +126,10 @@
     $(".js-gotop").on("click", function (event) {
       event.preventDefault();
 
-      $("html, body").animate(
+      // Reset all scrollable elements to the top of the page
+      $("html, body, *").animate(
         {
-          scrollTop: $("html").offset().top,
+          scrollTop: 0, // Ensure it always scrolls to the very top of the page
         },
         500,
         "easeInOutExpo"
