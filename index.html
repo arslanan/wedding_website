@@ -132,7 +132,6 @@
                     <a href="FAQ.html" class="btn btn-default btn-sm">Infos pratiques</a>
                     <a href="Logements.html" class="btn btn-default btn-sm">Accès et Logements</a>
                     <a href="publish_photos.html" class="btn btn-default btn-sm">Publiez vos photos</a>
-                    <a href="serbian_site__index.html" class="btn btn-default btn-sm">__temp__site_serbe</a>
                   </p>
                 </div>
               </div>
@@ -183,39 +182,41 @@
               <h2>Photos</h2>
             </div>
           </div>
-          <div class="row row-bottom-padded-md">
-            <div style="display: flex; justify-content: center">
-              <ul id="fh5co-gallery-list">
-                <li
-                  class="one-third animate-box"
-                  data-animate-effect="fadeIn"
-                  style="background-image: url(images/RS1.jpg)">
-                  <a href="images/RS1.jpg">
-                    <div class="case-studies-summary"></div>
-                  </a>
-                </li>
-
-                <li
-                  class="one-third animate-box"
-                  data-animate-effect="fadeIn"
-                  style="background-image: url(images/RS2.jpg)">
-                  <a href="images/RS2.jpg">
-                    <div class="case-studies-summary"></div>
-                  </a>
-                </li>
-                <li
-                  class="one-third animate-box"
-                  data-animate-effect="fadeIn"
-                  style="background-image: url(images/RS3.jpg)">
-                  <a href="images/RS3.jpg">
-                    <div class="case-studies-summary"></div>
-                  </a>
-                </li>
-              </ul>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="gallery-grid">
+                <img
+                  src="images/RS1.jpg"
+                  alt="Photo 1"
+                  class="img-responsive"
+                  style="aspect-ratio: 1 / 1; object-fit: cover" />
+                <img
+                  src="images/RS2.jpg"
+                  alt="Photo 2"
+                  class="img-responsive"
+                  style="aspect-ratio: 1 / 1; object-fit: cover" />
+                <img
+                  src="images/RS3.jpg"
+                  alt="Photo 3"
+                  class="img-responsive"
+                  style="aspect-ratio: 1 / 1; object-fit: cover" />
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <style>
+        .gallery-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 10px;
+        }
+        .gallery-grid img {
+          width: 100%;
+          border-radius: 8px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+      </style>
     </div>
     <div class="gototop js-top">
       <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
