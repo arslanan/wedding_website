@@ -578,7 +578,7 @@ mark,
 }
 
 .text-left {
-  text-align: left;
+  text-align: justify;
 }
 
 .text-right {
@@ -1905,11 +1905,11 @@ caption {
   padding-top: 8px;
   padding-bottom: 8px;
   color: #777777;
-  text-align: left;
+  text-align: justify;
 }
 
 th {
-  text-align: left;
+  text-align: center;
 }
 
 .table {
@@ -3380,7 +3380,7 @@ tbody.collapse.in {
   margin: 2px 0 0;
   list-style: none;
   font-size: 14px;
-  text-align: left;
+  text-align: justify;
   background-color: #fff;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -5357,7 +5357,7 @@ button.list-group-item:focus {
 
 button.list-group-item {
   width: 100%;
-  text-align: left;
+  text-align: justify;
 }
 
 .list-group-item.disabled,
@@ -6140,7 +6140,7 @@ button.close {
   letter-spacing: normal;
   line-break: auto;
   line-height: 1.42857;
-  text-align: left;
+  text-align: justify;
   text-align: start;
   text-decoration: none;
   text-shadow: none;
@@ -6262,7 +6262,7 @@ button.close {
   letter-spacing: normal;
   line-break: auto;
   line-height: 1.42857;
-  text-align: left;
+  text-align: justify;
   text-align: start;
   text-decoration: none;
   text-shadow: none;

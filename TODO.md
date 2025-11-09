@@ -11,3 +11,5 @@
 - alignement justifié
 
 - choisir phtos page acceuil
+
+- go to otop en bas de chaque page

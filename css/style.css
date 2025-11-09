@@ -172,7 +172,7 @@ figure {
   position: absolute;
   top: 40px;
   left: 0;
-  text-align: left;
+  text-align: justify;
   background: #fff;
   padding: 20px;
   -webkit-border-radius: 4px;
@@ -980,7 +980,7 @@ form label {
 }
 .couple-half .desc-bride {
   padding-left: 180px;
-  text-align: left;
+  text-align: justify;
 }
 @media screen and (max-width: 480px) {
   .couple-half .groom,
