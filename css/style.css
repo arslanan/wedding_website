@@ -1070,6 +1070,12 @@ form label {
   line-height: 1.5;
   color: #011d0c;
 }
+.fh5co-heading ul li {
+  font-family: "icomoon";
+  font-size: 20px;
+  line-height: 1.5;
+  color: #011d0c;
+}
 .fh5co-heading span {
   text-transform: uppercase;
   font-size: 13px;

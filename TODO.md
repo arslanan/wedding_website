@@ -1,10 +1,6 @@
-- Faire partie ajout photos
-
-- Enlever temp site serbe
+- Faire partie ajout photos via dropbox
 
 - ajouter recettes page serbe par Natou
-
-- corrections Natou site serbe
 
 - Demander témoins si on peut mettre leur contact + mettre contact (page FAQ)
 
@@ -14,6 +10,4 @@
 
 - alignement justifié
 
-- intégrer tableau pourboire dans tableau de base sr_infos_pratiques
-
-- barre déroulante : activités autour de bajina basta
+- choisir phtos page acceuil
