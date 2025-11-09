@@ -1,6 +1,6 @@
 - Faire partie ajout photos via dropbox
 
-- ajouter recettes page serbe par Natou
+- relire restau serbe + ajouter coko oradz + complet lepinja
 
 - Demander témoins si on peut mettre leur contact + mettre contact (page FAQ)
 
@@ -9,3 +9,5 @@
 - bg small iphone pas ok sauf si ligne de coté ouverte ...
 
 - tableau vocabulaire toujours pas ok + texte chez natou
+
+- ajouter activités Belgrade
