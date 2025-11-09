@@ -109,37 +109,109 @@
           </div>
         </div>
       </nav>
-
       <header
-        id="fh5co-header"
-        class="fh5co-cover"
-        role="banner"
-        style="background-image: url(images/bg.jpg)"
-        data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center">
-              <div class="display-t">
-                <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                  <h1>Nataša &amp; Antony</h1>
-                  <br /><br />
-                  <img src="images/fprint.png" alt="Nataša + Antony" />
-                  <h2>09.05.2026</h2>
-                  <h2>"Umrećemo zajedno, ali ne od gladi, to je sigurno."</h2>
-                  <div class="flipTimebox">
-                    <div class="clock clock-fix"></div>
-                  </div>
-                  <p>
-                    <a href="#fh5co-gallery-sr" class="btn btn-default btn-sm">Naša priča</a>
-                    <a href="FAQ_sr.html" class="btn btn-default btn-sm">Praktične informacije</a>
-                    <a href="Logements_sr.html" class="btn btn-default btn-sm">Pristup i smeštaj</a>
-                    <a href="publish_photos_sr.html" class="btn btn-default btn-sm">Postavite vaše fotografije</a>
-                  </p>
-                </div>
-              </div>
-            </div>
+        id="header"
+        style="
+          background-image: url(images/bg.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          color: white;
+        ">
+        <div
+          style="
+            background: rgba(0, 0, 0, 0.3);
+            padding: 5%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+          ">
+          <h1
+            style="
+              color: white;
+              font-family: 'Dancing Script', Arial, serif;
+              font-size: 2.5em;
+              margin: 0;
+              text-align: center;
+            ">
+            Nataša &amp; Antony<br /><br /><br />
+          </h1>
+          <br />
+          <img src="images/fprint.png" alt="Nataša + Antony" style="max-width: 80%; height: auto" />
+          <h2 style="margin: 10px 0; color: white; font-family: 'Dancing Script', Arial, serif">09.05.2026<br /></h2>
+          <h2 style="margin: 10px 0; color: white; font-family: 'Dancing Script', Arial, serif">
+            "Umrećemo zajedno, ali ne od gladi, to je sigurno."<br /><br />
+          </h2>
+          <div class="flipTimebox" style="margin: 20px 0">
+            <div class="clock clock-fix"></div>
           </div>
+          <p style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px">
+            <a
+              href="#fh5co-gallery-sr"
+              style="
+                margin: 5px;
+                padding: 10px 15px;
+                background: #fff;
+                color: #646464;
+                text-decoration: none;
+                border-radius: 20px;
+                text-transform: uppercase;
+                font-size: 0.9em;
+              ">
+              Naša priča
+            </a>
+            <a
+              href="FAQ_sr.html"
+              style="
+                margin: 5px;
+                padding: 10px 15px;
+                background: #fff;
+                color: #646464;
+                text-decoration: none;
+                border-radius: 20px;
+                text-transform: uppercase;
+                font-size: 0.9em;
+              ">
+              Praktične informacije
+            </a>
+            <a
+              href="Logements_sr.html"
+              style="
+                margin: 5px;
+                padding: 10px 15px;
+                background: #fff;
+                color: #646464;
+                text-decoration: none;
+                border-radius: 20px;
+                text-transform: uppercase;
+                font-size: 0.9em;
+              "
+              >Pristup i smeštaj</a
+            >
+            <a
+              href="publish_photos_sr.html"
+              style="
+                margin: 5px;
+                padding: 10px 15px;
+                background: #fff;
+                color: #646464;
+                text-decoration: none;
+                border-radius: 20px;
+                text-transform: uppercase;
+                font-size: 0.9em;
+              "
+              >Postavite vaše fotografije</a
+            >
+          </p>
         </div>
       </header>
 
@@ -177,47 +249,56 @@
           </div>
         </div>
       </div>
+
       <!-- Bloc "Photos" -->
       <div id="fh5co-gallery" class="fh5co-section-gray">
         <div class="container">
           <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-              <h2 style="font-family: 'Dancing Script', cursive">Fotografije</h2>
+              <h2>Photos</h2>
             </div>
           </div>
-          <div class="row row-bottom-padded-md">
-            <div style="display: flex; justify-content: center">
-              <ul id="fh5co-gallery-list">
-                <li
-                  class="one-third animate-box"
-                  data-animate-effect="fadeIn"
-                  style="background-image: url(images/RS1.jpg)">
-                  <a href="images/RS1.jpg">
-                    <div class="case-studies-summary"></div>
-                  </a>
-                </li>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="gallery-grid">
+                <img
+                  src="images/RS3.jpg"
+                  alt="Photo 3"
+                  class="img-responsive"
+                  style="aspect-ratio: 1 / 1; object-fit: cover" />
 
-                <li
-                  class="one-third animate-box"
-                  data-animate-effect="fadeIn"
-                  style="background-image: url(images/RS2.jpg)">
-                  <a href="images/RS2.jpg">
-                    <div class="case-studies-summary"></div>
-                  </a>
-                </li>
-                <li
-                  class="one-third animate-box"
-                  data-animate-effect="fadeIn"
-                  style="background-image: url(images/RS3.jpg)">
-                  <a href="images/RS3.jpg">
-                    <div class="case-studies-summary"></div>
-                  </a>
-                </li>
-              </ul>
+                <img
+                  src="images/RS2.jpg"
+                  alt="Photo 2"
+                  class="img-responsive"
+                  style="aspect-ratio: 1 / 1; object-fit: cover" />
+                <img
+                  src="images/RS4.jpg"
+                  alt="Photo 4"
+                  class="img-responsive"
+                  style="aspect-ratio: 1 / 1; object-fit: cover" />
+                <img
+                  src="images/RS1.jpg"
+                  alt="Photo 1"
+                  class="img-responsive"
+                  style="aspect-ratio: 1 / 1; object-fit: cover" />
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <style>
+        .gallery-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 10px;
+        }
+        .gallery-grid img {
+          width: 100%;
+          border-radius: 8px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+      </style>
     </div>
     <div class="gototop js-top">
       <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
