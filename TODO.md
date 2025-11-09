@@ -9,5 +9,3 @@
 - bg small iphone pas ok sauf si ligne de coté ouverte ...
 
 - tableau vocabulaire toujours pas ok + texte chez natou
-
-- photos sur site Fr e nserbe
