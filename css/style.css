@@ -17,14 +17,29 @@
 * 	Template Style 
 *
 * ======================================================= */
+
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url(../images/2e_bg.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
   font-family: "Work Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
   color: #828282;
-  background: #fff;
-  overflow-x: hidden;
 }
 
 .full-width-center {
@@ -94,17 +109,14 @@ figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #646464;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #646464;
 }
 
 ::selection {
   color: #fff;
-  background: #646464;
 }
 
 .fh5co-nav {

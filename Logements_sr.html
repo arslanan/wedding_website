@@ -48,32 +48,9 @@
     <![endif]-->
 
     <!-- Pozadina -->
-    <style>
-      /* remove background-attachment on body */
-      html,
-      body {
-        height: 100%;
-      }
-      body {
-        background: none;
-      }
-
-      /* fixed background element behind content */
-      .bg-fixed {
-        position: fixed;
-        inset: 0; /* top:0; right:0; bottom:0; left:0 */
-        background-image: url("images/2e_bg.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        z-index: -1; /* behind page content */
-        transform: translateZ(0); /* improve rendering */
-      }
-    </style>
   </head>
 
   <body>
-    <div class="bg-fixed" aria-hidden="true"></div>
     <!-- Loader -->
     <div class="fh5co-loader"></div>
 
