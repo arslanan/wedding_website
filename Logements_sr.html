@@ -49,17 +49,31 @@
 
     <!-- Pozadina -->
     <style>
+      /* remove background-attachment on body */
+      html,
       body {
+        height: 100%;
+      }
+      body {
+        background: none;
+      }
+
+      /* fixed background element behind content */
+      .bg-fixed {
+        position: fixed;
+        inset: 0; /* top:0; right:0; bottom:0; left:0 */
         background-image: url("images/2e_bg.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        background-attachment: fixed;
+        z-index: -1; /* behind page content */
+        transform: translateZ(0); /* improve rendering */
       }
     </style>
   </head>
 
   <body>
+    <div class="bg-fixed" aria-hidden="true"></div>
     <!-- Loader -->
     <div class="fh5co-loader"></div>
 
@@ -75,8 +89,7 @@
                     <img
                       src="images/fr_flag.png"
                       alt="French Flag"
-                      style="width: 20px; height: 14px; margin-right: 5px"
-                    />
+                      style="width: 20px; height: 14px; margin-right: 5px" />
                     French
                   </a>
                 </li>
@@ -85,8 +98,7 @@
                     <img
                       src="images/sr_flag.png"
                       alt="Serbian Flag"
-                      style="width: 20px; height: 14px; margin-right: 5px"
-                    />
+                      style="width: 20px; height: 14px; margin-right: 5px" />
                     Srpski
                   </a>
                 </li>
@@ -125,8 +137,7 @@
                   max-width: 500px;
                   margin: auto;
                   color: #222;
-                "
-              >
+                ">
                 <h3>Naš događaj</h3>
                 <div class="event-col">
                   <i class="icon-calendar"></i>
@@ -145,8 +156,7 @@
                   style="border: 0"
                   allowfullscreen=""
                   loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <br />
                 Imanje se nalazi na 1h15 vožnje od Pariza kolima.<br />Organizovaćemo sistem za zajednički prevoz (u
                 meri mogućeg). Molimo vas da nas kontaktirate ako imate slobodno mesto ili ako tražite prevoz, dodaćemo
@@ -156,8 +166,7 @@
                 <img
                   src="images/chemin_moulin.jpg"
                   alt="Put do Moulin-a"
-                  style="width: 100%; max-width: 400px; border-radius: 8px; margin: 16px 0"
-                />
+                  style="width: 100%; max-width: 400px; border-radius: 8px; margin: 16px 0" />
                 <br />
 
                 Evo linka za trasu javnim prevozom na Google mapama:
@@ -168,8 +177,7 @@
                   style="border: 0"
                   allowfullscreen=""
                   loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
           </div>
@@ -192,8 +200,7 @@
               max-width: 700px;
               margin: 0 auto;
               box-shadow: 0 2px 8px rgba(14, 1, 1, 0.07);
-            "
-          >
+            ">
             <p style="font-family: Work Sans, Arial, sans-serif">
               Za one koji ne žele da putuju noću posle proslave, pripremili smo izbor smeštaja u blizini l'Orangerie du
               moulin.
@@ -219,8 +226,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>🪶 Les plumes de Vallombreuse</h4>
             <p><strong>Adresa :</strong> 3 Rue du Bois Maréchal, Bransles</p>
             <p><strong>Udaljenost (🚗) :</strong> 2 min</p>
@@ -244,8 +250,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>🐓 Au chant du coq</h4>
             <p><strong>Adresa :</strong> Rue de la Vallée aux Chats, Les Canivelles 76620 BRANSLES</p>
             <p><strong>Udaljenost (🚗) :</strong> 2 min</p>
@@ -273,8 +278,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>🪹 Un nid pour la nuit</h4>
             <p><strong>Adresa :</strong> 3 Rue du Gué, 77620 Bransles</p>
             <p><strong>Udaljenost (🚗) :</strong> 4 min</p>
@@ -303,8 +307,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>🏡 Le Moulin du Mez</h4>
             <p><strong>Adresa :</strong> 45680 Dordives</p>
             <p><strong>Udaljenost (🚗) :</strong> 5 min</p>
@@ -332,8 +335,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>🌳 L'Orée du chêne</h4>
             <p><strong>Adresa :</strong> 1 bis hameau de La Brosse 77620 Bransles</p>
             <p><strong>Udaljenost (🚗) :</strong> 5 min</p>
@@ -361,8 +363,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>💁‍♀️ Le moulin de Madame</h4>
             <p><strong>Adresa :</strong> Bransles</p>
             <p><strong>Udaljenost (🚗) :</strong> 5 min</p>
@@ -386,8 +387,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>🏡 Gite des Hoctins</h4>
             <p><strong>Adresa :</strong> 1, Chemin des Hoctins 45210 CHEVANNES</p>
             <p><strong>Udaljenost (🚗) :</strong> 7 min</p>
@@ -415,8 +415,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>🤪 Les hébergements insolites du Danica</h4>
             <p><strong>Adresa :</strong> Chem. du Puits, 45680 Dordives</p>
             <p><strong>Udaljenost (🚗) :</strong> 8 min</p>
@@ -443,8 +442,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>🔑 L'auberge des clefs (ranije l'échapée belle)</h4>
             <p><strong>Adresa :</strong> 7 Rue de la Forge - 45210 Chevannes</p>
             <p><strong>Udaljenost (🚗) :</strong> 9 min</p>
@@ -471,8 +469,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>💎 Appartement Béryl i Appartement Jade</h4>
             <p><strong>Adresa : </strong> 22 Rue des Fossés, 77620 Égreville</p>
             <p><strong>Udaljenost (🚗) :</strong> 9 min</p>
@@ -506,8 +503,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>🌹 Domaine des Roses</h4>
             <p><strong>Adresa :</strong> 6 Rue du Marais Brûlé, Souppes-sur-Loing</p>
             <p><strong>Udaljenost (🚗) :</strong> 10 min</p>
@@ -531,8 +527,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>⛪ Hôtel de l'abbaye</h4>
             <p><strong>Adresa :</strong> Rue des Trois Platanes, 45210 Ferrières-en-Gâtinais</p>
             <p><strong>Udaljenost (🚗) :</strong> 10 min</p>
@@ -556,8 +551,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>🔧 Gite de l'atelier</h4>
             <p><strong>Adresa :</strong> Egreville</p>
             <p><strong>Udaljenost (🚗) :</strong> 10 min</p>
@@ -581,8 +575,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>🛌 Studio tout confort</h4>
             <p><strong>Adresa : </strong> 15 Résidence la Fontaine de la Treille, Souppes-sur-Loing</p>
             <p><strong>Udaljenost (🚗) :</strong> 11 min</p>
@@ -609,8 +602,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>🏠 Prizemlje kuće sa velikim dvorištem</h4>
             <p><strong>Adresa : </strong> Souppes-sur-Loing</p>
             <p><strong>Udaljenost (🚗) :</strong> ~11 min</p>
@@ -637,8 +629,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>🏡 Šarmantna kuća sa baštom</h4>
             <p><strong>Adresa : </strong> 10 Route de Griselles, 45210 Chevannes</p>
             <p><strong>Udaljenost (🚗) :</strong> ~11 min</p>
@@ -665,8 +656,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>👯 Gite : Le gué des filles</h4>
             <p><strong>Adresa :</strong> 8 Route du Moulin Neuf - 45210 Chevannes</p>
             <p><strong>Udaljenost (🚗) :</strong> 12 min</p>
@@ -693,8 +683,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>4️⃣ L'Allée du Quatre</h4>
             <p><strong>Adresa :</strong> 4, Rue du 21 août 77460 SOUPPES SUR LOING</p>
             <p><strong>Udaljenost (🚗) :</strong> 13 min</p>
@@ -721,8 +710,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>🏌️ Domaine et golf de Vaugouard</h4>
             <p><strong>Adresa : </strong> Chem. des Bois, 45210 Fontenay-sur-Loing</p>
             <p><strong>Udaljenost (🚗) :</strong> 14 min</p>
@@ -749,8 +737,7 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-            "
-          >
+            ">
             <h4>🌾 La grange des blins</h4>
             <p><strong>Adresa :</strong> Bruno 4 les Blins 89150 JOUY</p>
             <p><strong>Udaljenost (🚗) :</strong> 17 min</p>
