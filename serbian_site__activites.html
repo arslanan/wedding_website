@@ -96,51 +96,6 @@
       </nav>
       <!-- Header -->
       <div id="fh5co-event" class="fh5co-bg">
-<!-- Carte interactive des activités -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<div id="activity-map" style="width: 100%; height: 400px; margin-bottom: 30px; border-radius: 12px; overflow: hidden;"></div>
-<script>
-  // Liste des points (nom, lat, lon, id de l'ancre)
-  const activityPoints = [
-    { name: "Baignade Rača", lat: 43.973754, lon: 19.540633, anchor: "baignade-drina" },
-    { name: "Baignade Regata", lat: 44.040495, lon: 19.618548, anchor: "baignade-drina" },
-    { name: "Kućica na Drini", lat: 43.984303, lon: 19.566547, anchor: "kucica-na-drini" },
-    { name: "Perućac", lat: 43.963194, lon: 19.406254, anchor: "lac-perucac" },
-    { name: "Zaovine", lat: 43.865586, lon: 19.409835, anchor: "lac-zaovine" },
-    { name: "Tara", lat: 43.888227, lon: 19.554320, anchor: "parc-tara" },
-    { name: "Banjska Stena", lat: 43.945772, lon: 19.408756, anchor: "banjska-stena" },
-    { name: "Monastère Rača", lat: 43.931295, lon: 19.541119, anchor: "monastere-raca" },
-    { name: "Mokra Gora", lat: 43.793867, lon: 19.512084, anchor: "mokra-gora" },
-    { name: "Drvengrad", lat: 43.796299, lon: 19.506825, anchor: "mokra-gora" },
-    { name: "Zlatibor", lat: 43.726160, lon: 19.699793, anchor: "zlatibor" },
-    { name: "Višegrad", lat: 43.790425, lon: 19.293908, anchor: "visegrad" },
-    { name: "Uvac", lat: 43.357862, lon: 19.953562, anchor: "uvac" }
-  ];
-  // Initialisation de la carte
-  const map = L.map('activity-map').setView([43.9, 19.5], 9);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
-  activityPoints.forEach(pt => {
-    const marker = L.marker([pt.lat, pt.lon]).addTo(map).bindPopup(pt.name);
-    marker.on('click', function() {
-      const el = document.getElementById(pt.anchor);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        el.classList.add('highlight-map-anchor');
-        setTimeout(() => el.classList.remove('highlight-map-anchor'), 1500);
-      }
-    });
-  });
-</script>
-<style>
-  .highlight-map-anchor {
-    outline: 3px solid #e67e22;
-    transition: outline 0.3s;
-  }
-</style>
-
         <div class="container text-center">
           <!-- Titre -->
           <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
@@ -164,6 +119,54 @@
               chaleureuse des lieux. Que vous soyez amateur de détente ou d'aventure, Bajina Bašta saura vous séduire
               par son authenticité et sa convivialité.
             </p>
+
+            <!-- Carte interactive des activités -->
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+            <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+            <div
+              id="activity-map"
+              style="width: 100%; height: 400px; margin-bottom: 30px; border-radius: 12px; overflow: hidden"
+            ></div>
+            <script>
+              // Liste des points (nom, lat, lon, id de l'ancre)
+              const activityPoints = [
+                { name: "Baignade Rača", lat: 43.973754, lon: 19.540633, anchor: "baignade-drina" },
+                { name: "Baignade Regata", lat: 44.040495, lon: 19.618548, anchor: "baignade-drina" },
+                { name: "Kućica na Drini", lat: 43.984303, lon: 19.566547, anchor: "kucica-na-drini" },
+                { name: "Perućac", lat: 43.963194, lon: 19.406254, anchor: "lac-perucac" },
+                { name: "Zaovine", lat: 43.865586, lon: 19.409835, anchor: "lac-zaovine" },
+                { name: "Tara", lat: 43.888227, lon: 19.55432, anchor: "parc-tara" },
+                { name: "Banjska Stena", lat: 43.945772, lon: 19.408756, anchor: "banjska-stena" },
+                { name: "Monastère Rača", lat: 43.931295, lon: 19.541119, anchor: "monastere-raca" },
+                { name: "Mokra Gora", lat: 43.793867, lon: 19.512084, anchor: "mokra-gora" },
+                { name: "Drvengrad", lat: 43.796299, lon: 19.506825, anchor: "mokra-gora" },
+                { name: "Zlatibor", lat: 43.72616, lon: 19.699793, anchor: "zlatibor" },
+                { name: "Višegrad", lat: 43.790425, lon: 19.293908, anchor: "visegrad" },
+                { name: "Uvac", lat: 43.357862, lon: 19.953562, anchor: "uvac" },
+              ];
+              // Initialisation de la carte
+              const map = L.map("activity-map").setView([43.9, 19.5], 9);
+              L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                attribution: "&copy; OpenStreetMap contributors",
+              }).addTo(map);
+              activityPoints.forEach((pt) => {
+                const marker = L.marker([pt.lat, pt.lon]).addTo(map).bindPopup(pt.name);
+                marker.on("click", function () {
+                  const el = document.getElementById(pt.anchor);
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth", block: "start" });
+                    el.classList.add("highlight-map-anchor");
+                    setTimeout(() => el.classList.remove("highlight-map-anchor"), 1500);
+                  }
+                });
+              });
+            </script>
+            <style>
+              .highlight-map-anchor {
+                outline: 3px solid #e67e22;
+                transition: outline 0.3s;
+              }
+            </style>
 
             <!-- Liste des activités -->
             <!-- Drina -->
