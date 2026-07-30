@@ -113,12 +113,258 @@
                 color: #222;
               "
             >
-              Bajina Bašta est un charmant village niché au cœur de la nature et entouré par un magnifique parc
+              " > Bajina Bašta est un charmant village niché au cœur de la nature et entouré par un magnifique parc
               national. Les environs offrent de nombreuses activités pour tous les goûts. La ville possède également de
               nombreux cafés et restaurants où vous pourrez savourer la cuisine locale et profiter de l'ambiance
               chaleureuse des lieux. Que vous soyez amateur de détente ou d'aventure, Bajina Bašta saura vous séduire
               par son authenticité et sa convivialité.
             </p>
+
+            <!-- Explication carte et liste -->
+            <div
+              style="
+                background: rgba(244, 227, 212, 0.65);
+                border-radius: 10px;
+                padding: 18px 20px 10px 20px;
+                margin-bottom: 18px;
+                color: #222;
+              "
+            >
+              <b>Carte interactive des activités :</b><br />
+              Voici la liste des activités proposées autour de Bajina Bašta:<br />
+              <ul id="activity-list-map" style="list-style: none; padding-left: 0">
+                <li>
+                  <span class="number-marker">1</span> et <span class="number-marker">2</span> :
+
+                  <a
+                    href="#baignade-drina"
+                    onclick="
+                      scrollToAnchor('baignade-drina');
+                      return false;
+                    "
+                    >Baignade Rača</a
+                  >
+                  -
+
+                  <a
+                    href="#baignade-drina"
+                    onclick="
+                      scrollToAnchor('baignade-drina');
+                      return false;
+                    "
+                  >
+                    Baignade Regata</a
+                  >
+                </li>
+                <li>
+                  <span class="number-marker">3</span>
+                  <a
+                    href="#kucica-na-drini"
+                    onclick="
+                      scrollToAnchor('kucica-na-drini');
+                      return false;
+                    "
+                    >Kućica na Drini</a
+                  >
+                </li>
+                <li>
+                  <span class="number-marker">4</span>
+                  <a
+                    href="#lac-perucac"
+                    onclick="
+                      scrollToAnchor('lac-perucac');
+                      return false;
+                    "
+                    >Perućac</a
+                  >
+                </li>
+                <li>
+                  <span class="number-marker">5</span>
+                  <a
+                    href="#lac-zaovine"
+                    onclick="
+                      scrollToAnchor('lac-zaovine');
+                      return false;
+                    "
+                    >Zaovine</a
+                  >
+                </li>
+                <li>
+                  <span class="number-marker">6</span>
+                  <a
+                    href="#parc-tara"
+                    onclick="
+                      scrollToAnchor('parc-tara');
+                      return false;
+                    "
+                    >Tara</a
+                  >
+                </li>
+                <li>
+                  <span class="number-marker">7</span>
+                  <a
+                    href="#banjska-stena"
+                    onclick="
+                      scrollToAnchor('banjska-stena');
+                      return false;
+                    "
+                    >Banjska Stena</a
+                  >
+                </li>
+                <li>
+                  <span class="number-marker">8</span>
+                  <a
+                    href="#monastere-raca"
+                    onclick="
+                      scrollToAnchor('monastere-raca');
+                      return false;
+                    "
+                    >Monastère Rača</a
+                  >
+                </li>
+                <li>
+                  <span class="number-marker">9</span>
+                  <a
+                    href="#mokra-gora"
+                    onclick="
+                      scrollToAnchor('mokra-gora');
+                      return false;
+                    "
+                    >Mokra Gora</a
+                  >
+                </li>
+                <li>
+                  <span class="number-marker">10</span>
+                  <a
+                    href="#mokra-gora"
+                    onclick="
+                      scrollToAnchor('mokra-gora');
+                      return false;
+                    "
+                    >Drvengrad</a
+                  >
+                </li>
+                <li>
+                  <span class="number-marker">11</span>
+                  <a
+                    href="#zlatibor"
+                    onclick="
+                      scrollToAnchor('zlatibor');
+                      return false;
+                    "
+                    >Zlatibor</a
+                  >
+                </li>
+                <li>
+                  <span class="number-marker">12</span>
+                  <a
+                    href="#visegrad"
+                    onclick="
+                      scrollToAnchor('visegrad');
+                      return false;
+                    "
+                    >Višegrad</a
+                  >
+                </li>
+                <li>
+                  <span class="number-marker">13</span>
+                  <a
+                    href="#uvac"
+                    onclick="
+                      scrollToAnchor('uvac');
+                      return false;
+                    "
+                    >Uvac</a
+                  >
+                  (Dézoomez un peu la carte pour voir le point)
+                </li>
+              </ul>
+
+              <script>
+                function scrollToAnchor(anchor) {
+                  const el = document.getElementById(anchor);
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth", block: "start" });
+                    el.classList.add("highlight-map-anchor");
+                    setTimeout(() => el.classList.remove("highlight-map-anchor"), 1500);
+                  }
+                }
+              </script>
+
+              <!-- Carte interactive des activités -->
+
+              <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+              <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+              <div
+                id="activity-map"
+                style="width: 100%; height: 400px; margin-bottom: 30px; border-radius: 12px; overflow: hidden"
+              ></div>
+              <script>
+                // Liste des points (nom, lat, lon, id de l'ancre)
+                const activityPoints = [
+                  { name: "Baignade Rača", lat: 43.973754, lon: 19.540633, anchor: "baignade-drina" },
+                  { name: "Baignade Regata", lat: 44.040495, lon: 19.618548, anchor: "baignade-drina" },
+                  { name: "Kućica na Drini", lat: 43.984303, lon: 19.566547, anchor: "kucica-na-drini" },
+                  { name: "Perućac", lat: 43.963194, lon: 19.406254, anchor: "lac-perucac" },
+                  { name: "Zaovine", lat: 43.865586, lon: 19.409835, anchor: "lac-zaovine" },
+                  { name: "Tara", lat: 43.888227, lon: 19.55432, anchor: "parc-tara" },
+                  { name: "Banjska Stena", lat: 43.945772, lon: 19.408756, anchor: "banjska-stena" },
+                  { name: "Monastère Rača", lat: 43.931295, lon: 19.541119, anchor: "monastere-raca" },
+                  { name: "Mokra Gora", lat: 43.793867, lon: 19.512084, anchor: "mokra-gora" },
+                  { name: "Drvengrad", lat: 43.796299, lon: 19.506825, anchor: "mokra-gora" },
+                  { name: "Zlatibor", lat: 43.72616, lon: 19.699793, anchor: "zlatibor" },
+                  { name: "Višegrad", lat: 43.790425, lon: 19.293908, anchor: "visegrad" },
+                  { name: "Uvac", lat: 43.357862, lon: 19.953562, anchor: "uvac" },
+                ];
+                // Initialisation de la carte
+                const map = L.map("activity-map").setView([43.9, 19.5], 9);
+                L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                  attribution: "&copy; OpenStreetMap contributors",
+                }).addTo(map);
+                activityPoints.forEach((pt, idx) => {
+                  // Create a custom numbered icon
+                  const number = idx + 1;
+                  const icon = L.divIcon({
+                    className: "custom-div-icon",
+                    html: `<div class="number-marker">${number}</div>`,
+                    iconSize: [30, 42],
+                    iconAnchor: [15, 42],
+                    popupAnchor: [0, -36],
+                  });
+                  const marker = L.marker([pt.lat, pt.lon], { icon }).addTo(map).bindPopup(pt.name);
+                  marker.on("click", function () {
+                    const el = document.getElementById(pt.anchor);
+                    if (el) {
+                      el.scrollIntoView({ behavior: "smooth", block: "start" });
+                      el.classList.add("highlight-map-anchor");
+                      setTimeout(() => el.classList.remove("highlight-map-anchor"), 1500);
+                    }
+                  });
+                });
+              </script>
+            </div>
+            <style>
+              .highlight-map-anchor {
+                outline: 3px solid #e67e22;
+                transition: outline 0.3s;
+              }
+              .custom-div-icon .number-marker {
+                background: #e67e22;
+                color: #fff;
+                font-weight: bold;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.1em;
+                border: 2px solid #fff;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+                margin-top: 6px;
+                margin-left: 0px;
+              }
+            </style>
 
             <!-- Liste des activités -->
             <!-- Drina -->
@@ -162,7 +408,7 @@
                 padding: 20px;
               "
             >
-              <h3 style="margin-top: 0">Kućica na Drini</h3>
+              <h3 id="kucica-na-drini" style="margin-top: 0">Kućica na Drini</h3>
               <p style="color: black">
                 La maison sur la Drina est l'icône de la ville, bâtie par le club de Kayak sur un petit rocher au milieu
                 de la rivière. Un restaurant offre un point de vue sur la maison.
@@ -187,7 +433,7 @@
                 padding: 20px;
               "
             >
-              <h3 style="margin-top: 0">Le lac de Perućac</h3>
+              <h3 id="lac-perucac" style="margin-top: 0">Le lac de Perućac</h3>
               <p style="color: black">
                 Lac accessible à 25 min en voiture ou un peu plus en bus, possible d'y louer des kayaks et des pédalos.
                 <br />Un café surplombe le lac et propose des boissons et des glaces. <br />C'est le point de départ
@@ -214,7 +460,7 @@
                 padding: 20px;
               "
             >
-              <h3 style="margin-top: 0">Le lac de Zaovine</h3>
+              <h3 id="lac-zaovine" style="margin-top: 0">Le lac de Zaovine</h3>
               <p style="color: black">
                 Plus grand mais aussi plus loin, le lac de Zaovine est accessible à 45 min en voiture. Encore plus
                 excentré de la ville, il est plus proche de la nature que le lac de Perućac. Vous n'y trouverez pas de
@@ -244,7 +490,7 @@
                 padding: 20px;
               "
             >
-              <h3 style="margin-top: 0">Le parc Tara</h3>
+              <h3 id="parc-tara" style="margin-top: 0">Le parc Tara</h3>
               <p style="color: black">
                 Parc national dans la montagne, accessible en 30 min en voiture, vous pourrez y faire des petites
                 ballades comme des longues randonnées. À l'entrée du parc vous trouverez des stands de souvenirs, un
@@ -279,7 +525,7 @@
                 padding: 20px;
               "
             >
-              <h3 style="margin-top: 0">Point de vue Banjska Stena</h3>
+              <h3 id="banjska-stena" style="margin-top: 0">Point de vue Banjska Stena</h3>
               <p style="color: black">
                 C'est d'ici au XIXe siècle que l'on descendait le bois jusqu'à la Drina, pour le transporter ensuite
                 jusqu'à Belgrade par radeaux.
@@ -308,7 +554,7 @@
                 padding: 20px;
               "
             >
-              <h3 style="margin-top: 0">Monastère Rača</h3>
+              <h3 id="monastere-raca" style="margin-top: 0">Monastère Rača</h3>
               <p style="color: black">
                 Construit en 1276, partiellement détruit pendant l'occupation Ottomane et reconstruit en 1795.
                 Accessible à pied depuis Bajina Bašta après une ballade d'environ 1h, il est aussi possible de s'y
@@ -335,7 +581,7 @@
                 padding: 20px;
               "
             >
-              <h3 style="margin-top: 0">Mokra Gora & Drvengrad</h3>
+              <h3 id="mokra-gora" style="margin-top: 0">Mokra Gora & Drvengrad</h3>
               <p style="color: black">
                 Drvengrad (littéralement : ville de bois) est une petite ville dans la montagne où tout est en bois. La
                 ville a été entièrement construite par Emir Kusturica pour son film
@@ -364,7 +610,7 @@
                 padding: 20px;
               "
             >
-              <h3 style="margin-top: 0">Zlatibor</h3>
+              <h3 id="zlatibor" style="margin-top: 0">Zlatibor</h3>
               <p style="color: black">
                 Zlatibor est une station de montagne à environ 1h30 de Bajina Bašta. C'est une destination populaire
                 pour les activités de plein air, notamment la randonnée, le vélo et le ski en hiver. Vous pourrez y
@@ -390,7 +636,7 @@
                 padding: 20px;
               "
             >
-              <h3 style="margin-top: 0">Višegrad</h3>
+              <h3 id="visegrad" style="margin-top: 0">Višegrad</h3>
               <p style="color: black">
                 Cette ville de Bosnie est connue pour son pont construit par le Grand Vizir Mehmed Paša Sokolović en
                 1577. Originaire de la région, il était de confession orthodoxe sous l'empire Ottoman. À l'adolescence,
@@ -422,7 +668,7 @@
                 padding: 20px;
               "
             >
-              <h3 style="margin-top: 0">Uvac</h3>
+              <h3 id="uvac" style="margin-top: 0">Uvac</h3>
               <p style="color: black">
                 Si Banjska Stena est l'un des points de vue les plus connus de Serbie, Uvac est sûrement le plus connu.
                 Accessible en voiture à environ 2h30 de Bajina Bašta, vous pourrez admirer un magnifique point de vue
