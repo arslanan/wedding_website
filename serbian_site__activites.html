@@ -120,7 +120,37 @@
               par son authenticité et sa convivialité.
             </p>
 
-            <!-- Carte interactive des activités -->
+            <!-- Explication carte et liste -->
+<div style="background:rgba(244,227,212,0.65);border-radius:10px;padding:18px 20px 10px 20px;margin-bottom:18px;">
+  <b>Carte interactive des activités :</b><br>
+  Retrouvez ci-dessous une carte avec tous les points d'intérêt autour de Bajina Bašta. Cliquez sur un numéro sur la carte ou dans la liste pour accéder directement à la description de l'activité correspondante.<br><br>
+  <ul id="activity-list-map" style="list-style:none;padding-left:0;">
+    <li><span class="number-marker">1</span> <a href="#baignade-drina" onclick="scrollToAnchor('baignade-drina');return false;">Baignade Rača</a></li>
+    <li><span class="number-marker">2</span> <a href="#baignade-drina" onclick="scrollToAnchor('baignade-drina');return false;">Baignade Regata</a></li>
+    <li><span class="number-marker">3</span> <a href="#kucica-na-drini" onclick="scrollToAnchor('kucica-na-drini');return false;">Kućica na Drini</a></li>
+    <li><span class="number-marker">4</span> <a href="#lac-perucac" onclick="scrollToAnchor('lac-perucac');return false;">Perućac</a></li>
+    <li><span class="number-marker">5</span> <a href="#lac-zaovine" onclick="scrollToAnchor('lac-zaovine');return false;">Zaovine</a></li>
+    <li><span class="number-marker">6</span> <a href="#parc-tara" onclick="scrollToAnchor('parc-tara');return false;">Tara</a></li>
+    <li><span class="number-marker">7</span> <a href="#banjska-stena" onclick="scrollToAnchor('banjska-stena');return false;">Banjska Stena</a></li>
+    <li><span class="number-marker">8</span> <a href="#monastere-raca" onclick="scrollToAnchor('monastere-raca');return false;">Monastère Rača</a></li>
+    <li><span class="number-marker">9</span> <a href="#mokra-gora" onclick="scrollToAnchor('mokra-gora');return false;">Mokra Gora</a></li>
+    <li><span class="number-marker">10</span> <a href="#mokra-gora" onclick="scrollToAnchor('mokra-gora');return false;">Drvengrad</a></li>
+    <li><span class="number-marker">11</span> <a href="#zlatibor" onclick="scrollToAnchor('zlatibor');return false;">Zlatibor</a></li>
+    <li><span class="number-marker">12</span> <a href="#visegrad" onclick="scrollToAnchor('visegrad');return false;">Višegrad</a></li>
+    <li><span class="number-marker">13</span> <a href="#uvac" onclick="scrollToAnchor('uvac');return false;">Uvac</a></li>
+  </ul>
+</div>
+<script>
+function scrollToAnchor(anchor) {
+  const el = document.getElementById(anchor);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    el.classList.add('highlight-map-anchor');
+    setTimeout(() => el.classList.remove('highlight-map-anchor'), 1500);
+  }
+}
+</script>
+<!-- Carte interactive des activités -->
              
             <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
             <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
